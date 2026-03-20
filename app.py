@@ -90,7 +90,7 @@ async def run_mcp_travel_planner(destination: str, num_days: int, preferences: s
         travel_planner = Agent(
             name="Travel Planner",
             role="Creates travel itineraries using Airbnb, Google Maps, and Google Search",
-            model=OpenAIChat(id="gpt-4o", api_key=openai_key),
+            model=OpenAIChat(id="minimax/minimax-m2.5:free", api_key=openai_key, base_url='https://openrouter.ai/api/v1',),
             description=dedent(
                 """\
                 You are a professional travel consultant AI that creates highly detailed travel itineraries directly without asking questions.
